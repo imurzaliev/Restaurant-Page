@@ -1,0 +1,47 @@
+const homepage = () => {
+  const content = document.querySelector("#content");
+  const header = document.createElement("header");
+  const topbar = document.createElement("div");
+  const home = document.createElement("h3");
+  const menu = document.createElement("h3");
+  const contact = document.createElement("h3");
+  const title = document.createElement("h1");
+  const main = document.createElement("main");
+  const ul = document.createElement("ul");
+  const li1 = document.createElement("li");
+  const li2 = document.createElement("li");
+  const li3 = document.createElement("li");
+  const footer = document.createElement("footer");
+  const p = document.createElement("p");
+  const a = document.createElement("a");
+  home.textContent = "home";
+  menu.textContent = "menu";
+  contact.textContent = "contact";
+  title.textContent = "Your Favorite Restaurant";
+  li1.textContent = "Cozy atmosphere";
+  li2.textContent = "Tasty food";
+  li3.textContent = "Great service";
+  a.href = "https://github.com/imurzaliev/Restaurant-Page";
+  a.target = "_blank";
+  a.textContent = "Murzaliev Iskender ©";
+  p.textContent = "2022 ";
+  topbar.classList.add("topbar");
+  topbar.appendChild(home);
+  topbar.appendChild(menu);
+  topbar.appendChild(contact);
+  header.appendChild(topbar);
+  ul.appendChild(li1);
+  ul.appendChild(li2);
+  ul.appendChild(li3);
+  main.appendChild(title);
+  main.appendChild(ul);
+  p.appendChild(a);
+  footer.appendChild(p);
+  content.appendChild(header);
+  content.appendChild(main);
+  content.appendChild(footer);
+
+  return content;
+};
+
+export { homepage };

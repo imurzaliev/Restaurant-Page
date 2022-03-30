@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "azaret-mono";
+  src: url("./azeret-mono-v8-latin-regular.woff2") format("woff2"),
+    url("./azeret-mono-v8-latin-regular.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "azaret-mono";
+}
+
+h1 {
+  padding: 10px;
+}
+
+main {
+  background-image: url("./background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 90vw;
+  height: 70vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul,
+.topbar {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.topbar {
+  margin: 30px 0 0 0;
+  padding: 10px 0 10px 0;
+}
+
+header,
+main,
+footer,
+ul {
+  margin: 0 auto;
+  text-align: center;
+}
+li {
+  list-style-type: none;
+}
+
+footer {
+  background-color: black;
+  width: 100vw;
+  color: white;
+  padding: 5px 0;
+}
+
+a {
+  color: white;
+}
