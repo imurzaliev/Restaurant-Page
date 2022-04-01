@@ -4,6 +4,10 @@
     url("./azeret-mono-v8-latin-regular.woff") format("woff");
 }
 
+:root {
+  --primary-color: #283618;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +23,25 @@
   font-family: "azaret-mono";
 }
 
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  padding-bottom: 0px;
+  border-bottom: 5px solid var(--primary-color);
+}
+
 h1 {
   padding: 10px;
+}
+
+.about {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 main {
@@ -39,12 +60,11 @@ ul,
 .topbar {
   width: 500px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .topbar {
-  margin: 30px 0 0 0;
-  padding: 10px 0 10px 0;
+  margin: 80px 0 0 0;
 }
 
 header,
