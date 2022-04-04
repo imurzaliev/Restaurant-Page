@@ -1,16 +1,37 @@
-import { homepage } from "./homepage";
+import { Page } from "./page";
+import { Home } from "./home";
+import { Menu } from "./menu";
+import { Contact } from "./contact";
+import { Clear } from "./clear";
 import "./style.css";
-import Background from "./background.jpg";
 
-function component() {
-  const content = document.querySelector("#content");
+Page();
+Home();
 
-  // const myBackgroundImg = new Image();
-  // myBackgroundImg.src = Background;
+const homeBtn = document.querySelector(".home");
+homeBtn.classList.add("selected");
+homeBtn.onclick = () => {
+  Clear();
+  Home();
+  homeBtn.classList.toggle("selected");
+  menuBtn.classList.remove("selected");
+  contactBtn.classList.remove("selected");
+};
 
-  // content.appendChild(myBackgroundImg);
-  content.appendChild(homepage());
-  return content;
-}
+const menuBtn = document.querySelector(".menu");
+menuBtn.onclick = () => {
+  Clear();
+  Menu();
+  homeBtn.classList.remove("selected");
+  menuBtn.classList.toggle("selected");
+  contactBtn.classList.remove("selected");
+};
 
-component();
+const contactBtn = document.querySelector(".contact");
+contactBtn.onclick = () => {
+  Clear();
+  Contact();
+  homeBtn.classList.remove("selected");
+  menuBtn.classList.remove("selected");
+  contactBtn.classList.toggle("selected");
+};

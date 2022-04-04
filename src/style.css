@@ -44,19 +44,22 @@ h1 {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-main {
-  background-image: url("./background.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+main,
+.container {
   width: 90vw;
   height: 70vh;
+  background-color: #a5a58d;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-ul,
+.img {
+  background-image: url(./background.jpg);
+  background-size: cover;
+}
+
 .topbar {
   width: 500px;
   display: flex;
@@ -69,13 +72,9 @@ ul,
 
 header,
 main,
-footer,
-ul {
+footer {
   margin: 0 auto;
   text-align: center;
-}
-li {
-  list-style-type: none;
 }
 
 footer {
@@ -87,4 +86,38 @@ footer {
 
 a {
   color: white;
+}
+
+.selected {
+  padding-bottom: 0px;
+  border-bottom: 5px solid var(--primary-color);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  font-size: large;
+}
+
+li {
+  list-style: none;
+  font-size: small;
+}
+
+.inner {
+  display: flex;
+}
+
+.inner,
+h3 {
+  padding-bottom: 20px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  text-align: left;
 }
